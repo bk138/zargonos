@@ -1,10 +1,10 @@
 #!/bin/sh
 
-CMD="espeak -v german-mbrola-2 -s 250 -g 5 -p 10 -z"
+. ./zargon.cfg
 
 if [ -z "$1" ]
 then
-    cat - | $CMD
+    cat - | $ZSAY_CMD
 else
-    $CMD  "$*"
+    $ZSAY_CMD  "$*"
 fi
