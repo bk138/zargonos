@@ -1,0 +1,4 @@
+#!/bin/sh
+
+espeak -v german-mbrola-2 -s 250 -g 5 -p 10 -z "$*"
+
