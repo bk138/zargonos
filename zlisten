@@ -1,0 +1,17 @@
+#!/bin/sh
+
+. ./zargon.cfg
+
+PATH=.:$PATH
+
+# https://stackoverflow.com/a/39401963/361413
+unbuffer pocketsphinx_continuous -inmic yes -keyphrase "$ZLISTEN_KEYPHRASE" -kws_threshold "\1e-15" -logfn /dev/null | while read LINE
+do
+    if [ "$LINE" = "$ZLISTEN_KEYPHRASE" ]
+    then
+	echo "found keyword"
+	zsay "$ZLISTEN_PROMPT"
+    fi
+done
+
+
