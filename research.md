@@ -7,3 +7,8 @@ pocketsphinx_continuous -inmic yes -hmm /usr/share/pocketsphinx/model/en-us/en-u
 ```
 
 well... no!
+
+# pipsqueak
+
+* from https://research.mozilla.org/machine-learning/
+* will probably be based on Mozilla DeepSpeech, but no code yet in https://github.com/mozilla/pipsqueak
