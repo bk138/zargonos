@@ -18,6 +18,17 @@ well... no!
 # zamia
 
 * https://github.com/gooofy/zamia-speech
+* used to support cmusphinx, but dropped it, now only kaldi
+
+# rhasspy
+
+* https://rhasspy.readthedocs.io/en/latest/
+* https://github.com/synesthesiam/rhasspy
+
+# jasper
+
+* https://github.com/jasperproject/jasper-client
+* seems dead
 
 # snips
 
