@@ -16,3 +16,7 @@ well... no!
 # zamia
 
 * https://github.com/gooofy/zamia-speech
+
+# snips
+
+* https://docs.snips.ai/getting-started/quick-start-raspberry-pi
