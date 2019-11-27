@@ -8,6 +8,8 @@ pocketsphinx_continuous -inmic yes -hmm /usr/share/pocketsphinx/model/en-us/en-u
 
 well... no!
 
+* https://jo-so.de/2018-02/Spracherkennung-Linux-Pocketsphinx.html
+
 # pipsqueak
 
 * from https://research.mozilla.org/machine-learning/
