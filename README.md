@@ -3,28 +3,13 @@ Zargon's stuff
 
 ## Dependencies
 
-`sudo apt-get install espeak sox expect pocketsphinx pocketsphinx-en-us`
+`sudo apt-get install espeak sox expect pocketsphinx pocketsphinx-en-us pulseaudio`
 
-## HowTos
-### Sending Sound To Remote
+## How To Setup Remote Client Pulseaudio via SSH
 
-Basically not start a pulseaudio server on zargon's boxx, [but simply set the server via an environment variable](https://en.wikibooks.org/wiki/Configuring_Sound_on_Linux/Pulse_Audio/Remote_server).
-
-### Changing The Default Recording Device
-
-To use sound card 1 for recording instead of sound card 0, create a `/etc/asound.conf` with the following contents:
-
-```
- pcm.!default {
-         type asym
-         playback.pcm {
-                 type plug
-                 slave.pcm "hw:0,0"
-         }
-         capture.pcm {
-                 type plug
-                 slave.pcm "hw:1,0"
-         } 
- }
-```
+* If you get `pa_context_connect() failed: Connection refused`, run `pax11publish -r` once.
+* `sudo apt install pulseaudio-module-zeroconf` and add `load-module module-zeroconf-discover`
+  to `/etc/pulse/default.pa`.
+* Run `pacmd list-sinks | grep name:` and note your favourite sink after `name:`, call
+  `pacmd set-default-sink <sink name without brackets>` once.
 
